@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/Aller_Bd.ttf');
+    src: local('../font-face/Aller_Bd.ttf'), local('../font-face/Aller_Bd.ttf'),
+        url('../font-face/Aller_Bd.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/Aller_Rg.ttf');
+    src: local('Aller_Rg'), local('Aller_Rg'),
+        url('../font-face/Aller_Rg.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/AllerDisplay.ttf');
+    src: local('AllerDisplay'), local('AllerDisplay'),
+        url('../font-face/AllerDisplay.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/aller_Lt.ttf');
+    src: local('Aller_Lt'), local('Aller_Lt'),
+        url('../font-face/aller_Lt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/Aller_LtIt.ttf');
+    src: local('Aller_LtIt'), local('Aller_LtIt'),
+        url('../font-face/Aller_LtIt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../font-face/Aller_BdIt.ttf');
+    src: local('Aller_BdIt'), local('Aller_BdIt'),
+        url('../font-face/Aller_BdIt.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Panton';
+    src: url('../font-face/Panton-BlackCaps.otf');
+    src: local('Panton-BlackCaps'), local('Panton-blackCaps'),
+        url('../font-face/Panton-BlackCaps.otf') format('otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Panton';
+    src: url('../font-face/Panton-BlackitalicCaps.otf');
+    src: local('Panton-BlackitalicCaps'), local('Panton-BlackitalicCaps'),
+        url('../font-face/Panton-BlackitalicCaps.otf') format('otf');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Panton';
+    src: url('../font-face/Panton-LightCaps.otf');
+    src: local('Panton-LightCaps'), local('Panton-LightCaps'),
+        url('../font-face/Panton-LightCaps.otf') format('otf');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Panton';
+    src: url('../font-face/Panton-LightitalicCaps.otf');
+    src: local('Panton-LightitalicCaps'), local('Panton-LightitalicCaps'),
+        url('../font-face/Panton-LightitalicCaps.otf') format('otf');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+

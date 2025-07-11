@@ -1,0 +1,231 @@
+@use 'variable.scss' as c;
+
+@mixin flex-itens($gw:4rem){
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:$gw;
+    @media screen and (max-width:1440px){
+        gap:1rem;
+    }
+}
+@mixin nav-item ($c:c.$txtColor){
+    color:$c;
+    font:800 1.4rem c.$fs;
+    text-transform:uppercase;
+    transition:c.$transition;
+    &:hover{
+        font-weight:900;
+        color:c.$black;
+    }
+}
+@mixin group-form($brd:1px solid c.$txtColorGrey, $p:1rem){
+    label{
+        font:200 1.4rem c.$fs;
+        padding:$p;
+        text-transform:uppercase;
+        cursor:pointer;
+        border:$brd;
+        margin:0px;
+    }
+    input, select{
+        padding:$p;
+        border:$brd;
+        margin:0;
+        outline:transparent;
+        background:transparent;
+        color:c.$txtColor;
+        
+    }
+    input[type=number]{
+        -moz-appearance:textfield;
+        appearance:textfield;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=submit]{
+        background-color:c.$secondary;
+        color:c.$bg;
+        transition:c.$transition;
+        padding:1.2rem 1.4rem;
+        border-radius:.4rem;
+        border:transparent;
+        outline:transparent;
+        cursor:pointer;
+        &:hover{
+            background-color:c.$secondary-h;
+        }
+    }
+    @media screen and (max-width:1440px){
+        label{
+            padding:1rem .4rem;
+        }
+        input, select{
+            padding:1rem .4rem;
+        }
+    }
+}
+@mixin btn ($border:none, $bg:c.$principal, $bg-h:c.$principal-h,$p:1.4rem 4rem, $c:c.$secondary, $c-h:c.$bgTw, $mg:2rem auto){
+    border:$border;
+    background-color:$bg;
+    font:c.$ff-btn;
+    padding:$p;
+    border-radius:.4rem;
+    color:$c;
+    margin:$mg;
+    transition:c.$transition;
+    &:hover{
+        background-color: $bg-h;
+        color:$c-h;
+    }
+}
+.menu{
+    width:100%;
+    background-color: c.$bgTw;
+    height: auto;
+    padding-top:2rem;
+    .logo{
+        width: 12rem;
+        height:auto;
+        margin: 0 auto;
+    }
+    .nav{
+        @include flex-itens;
+        &__itens{
+            @include flex-itens;
+            &--navigation{
+                @include nav-item;
+            }
+        }
+        hr{
+            rotate:90deg;
+            height:2px;
+            background-color:c.$txtColorGrey;
+            border:transparent;
+        }
+        &__btn{
+            @include btn;
+        }
+    }  
+    &__bars{
+        display:none;
+    }  
+}
+.rastreio{
+    padding:2rem 0;
+    @include flex-itens;
+    &__info{
+        @include flex-itens($gw:.8rem);
+        &-title{
+            font:800 1.4rem/1.3rem c.$fs;
+            color:c.$principal;
+        }
+        .fi-bs-angle-small-right, .fi-bs-exclamation{
+            font-size:1.4rem;
+        }
+        .fi-bs-exclamation{
+            color:c.$secondary;
+        }
+    }
+    &__forms{
+        @include flex-itens;
+        @include group-form;
+    }
+}
+.rastreio__btn{
+display:none;
+}
+.nav__container{
+    position:absolute;
+    top:-1000px;
+    left:0;
+    width:100%;
+    overflow:hidden;  
+    transition:c.$transition-5;  
+    &--active{
+        position:absolute;
+        top:0;        
+        left:0;
+        height:100%;
+        background-color: c.$bg;
+        width:100%;
+        z-index:4;
+        transition:c.$transition-5;
+        .links-social{        
+            margin-left:4rem;            
+            .fi{
+                margin-right:4rem;
+                font-size:3.2rem;
+                color:c.$secondary;
+            }
+        }
+        .dms-bar{
+            position:absolute;
+            top:4rem;
+            right:4rem;
+            font-size:1.6rem;
+            color:c.$txtColor;
+            z-index:10;
+    }
+    }
+    &-links{
+        width:100%;
+        padding:12rem 4rem;
+        box-sizing: border-box;
+        li{
+
+            margin-top:6rem;
+            .nav__container-link{
+                text-decoration:none;
+                color:c.$principal;
+                font:800 2rem c.$fs;
+                text-transform:uppercase;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:1440px){
+    .menu{
+        padding:2rem;
+        box-sizing:border-box;
+    }
+}
+@media screen and (max-width:1024px){
+    .menu{
+        padding:2rem 0;
+        .logo{
+            margin:2rem;
+
+            width:16rem;
+            height:auto;
+        }
+        .nav{
+            display:none;
+            visibility: hidden;
+        }
+        &__bars{
+            display:block;
+            color:c.$principal;
+            font-size:3.2rem;
+            padding:.8rem;
+            margin-right:2rem;
+        }
+    }
+    .rastreio{
+        display:none;
+        visibility:hidden;
+    }
+    .rastreio__btn{
+        @include flex-itens;
+        width:100%;
+        padding:2rem 2.8rem;
+        background-color:c.$principal;
+        color:c.$bg;
+    }
+    
+}
+

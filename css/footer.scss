@@ -1,0 +1,92 @@
+@use 'variable.scss' as c;
+
+@mixin flex-itens($gw:4rem, $alg-i:center, $jc:space-between){
+    display:flex;
+    justify-content:$jc;
+    align-items:$alg-i;
+    gap:$gw;
+    @media screen and (max-width:1024px){
+        flex-direction:column;
+        padding:0 2rem;
+        box-sizing:border-box;
+    }
+}
+@mixin btn ($border:none, $bg:c.$principal, $bg-h:c.$principal-h,$p:1.4rem 4rem, $c:c.$secondary, $c-h:c.$bgTw, $mg:2rem auto){
+    border:$border;
+    background-color:$bg;
+    font:c.$ff-btn;
+    padding:$p;
+    border-radius:.4rem;
+    color:$c;
+    margin:$mg;
+    transition:c.$transition;
+    &:hover{
+        background-color: $bg-h;
+        color:$c-h;
+    }
+}
+footer{
+    background: c.$principal-h;
+    padding: 5.6rem 0;
+    margin-top:5.6rem;
+    .footer{
+        flex-direction:column;
+        @include flex-itens($alg-i:flex-start);
+        &__columns{
+            width:100%;
+            @include flex-itens($alg-i:flex-start, $gw:16rem);
+            &-left{
+                flex:2 1 70%;
+                @include flex-itens($alg-i:flex-start);
+                li{
+                    font:200 1.4rem/4rem c.$fs;
+                    color:c.$bg;
+                }
+            }
+            &-right{
+                flex:1 1 30%;
+                flex-direction:column;
+                @include flex-itens($jc:left, $alg-i:left, $gw:0);
+            }
+        }
+        .footer__col-title{
+            font:c.$ff-dsc-mm;
+            font-weight:800;
+            color:c.$bg;
+        }
+        .footer__col-btn{
+            @include btn($bg:transparent, $border:1px solid c.$secondary, $mg:1rem 0);
+        }
+        &__line{
+            width:100%;
+            @include flex-itens;
+            &-adress{
+                @extend .footer__col-title;
+                font-weight:200 !important;
+                font-size:1.4rem !important;
+                margin:1rem 0;
+                .fi{
+                    margin-right:1.6rem;
+                }
+            }  
+            &-social{
+                .fi{
+                    font-size:2.4rem;
+                    color:c.$bg;
+                    margin-left:2rem;
+                }                
+            }      
+        }
+        &__logo{
+            padding-left:2rem;
+        }
+    }    
+}
+
+@media screen and (max-width:1440px){
+    footer{
+        .footer{
+            padding:0 2rem;
+        }
+    }
+}

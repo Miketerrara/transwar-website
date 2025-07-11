@@ -1,0 +1,197 @@
+@use 'variable.scss' as c;
+@mixin flex-itens($gw:4rem, $alg-i:center, $jc:space-between){
+    display:flex;
+    justify-content:$jc;
+    align-items:$alg-i;
+    gap:$gw;
+    flex-direction:row;
+    @media screen and (max-width:1024px){
+        flex-direction:column;
+        padding:2rem;
+        box-sizing:border-box;
+    }
+}
+@mixin dsc($c:c.$txtColor){
+    font: c.$ff-dsc;
+    color: $c;
+    width:100%;
+}
+@mixin input-and-label-form(){
+    &-label{
+        @include dsc($c:c.$bg);
+        font-weight:200;          
+    }
+    &-input{
+        padding:1.6rem 1.2rem;
+        border-radius:.6rem;
+        background-color:c.$bgTw;
+        outline:transparent;
+        border:transparent;
+        width:100%;
+        box-sizing:border-box;
+        margin:1rem 0;
+        color:c.$txtColor;
+        &::placeholder{
+            font-size:1.4rem;
+            color:c.$txtColorGrey;
+        }
+        &:focus{
+            border:2px solid c.$secondary;
+        }
+    }
+    select{
+        width:100%;
+        padding:1.6rem 1.2rem;        
+        background-color:c.$bgTw;
+        outline:transparent;
+        border:transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        &::selection{
+            color:c.$txtColor;
+        }    
+        &:focus{
+            outline:none;
+        }
+        ::-ms-expand{
+            display:none;
+        }
+    }
+    &-submit{
+        padding:1.4rem 1.2rem;
+        border-radius:.6rem;
+        background-color:transparent;
+        outline:none;
+        border:1px solid c.$secondary;
+        width:20rem;
+        margin-top:2rem;
+        font:c.$ff-dsc;
+        font-weight:800;
+        color:c.$secondary;
+    }
+    &--select{
+        display:flex;
+        flex-direction:column;
+    }
+}
+.form{
+    width:100%;
+    height:auto;
+    background-color:c.$principal;
+    padding:4rem 2.8rem;
+    box-sizing: border-box;
+    border-radius:1rem;
+    margin:5rem 0;
+    &__group{
+        @include flex-itens;
+        @include input-and-label-form;
+    }
+}
+.rastreio__container{
+    display:none;
+}
+@media screen and (max-width:1024px){
+    .form{
+        box-sizing:border-box;
+        border-radius:0;
+    }
+    .rastreio__container{
+        position:absolute;        
+        display:block;
+        width:100%;
+        height:0;
+        top:0;
+        overflow:hidden;
+        transition:c.$transition-5;
+        .rastreio__forms{
+                @include flex-itens;
+                label{
+                    color:c.$bg;
+                    border:transparent;
+                    width:12rem;
+                }
+                input{
+                    background-color:c.$bg;
+                    width:100%;                
+                    &[type=submit]{
+                        color:c.$principal;
+                        background-color:c.$secondary;
+                        font-size:2.4rem;
+                        font-weight:900;
+                        margin-top:-1rem;
+                    }
+                }
+                fieldset{
+                    width:100%;
+                    display:flex;
+                    flex-wrap:nowrap;
+                }
+                select{
+                    background-color:c.$bg;
+                    width:100%;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    &::selection{
+                        color:c.$txtColor;
+                    }    
+                    &:focus{
+                        outline:none;
+                    }
+                    ::-ms-expand{
+                        display:none;
+                    }
+                }
+            }
+        &--active{
+            position:absolute;
+            top:16rem;
+            left:0;
+            background-color:c.$principal-h;
+            height:40rem;
+            padding:4rem 0;
+            width:100%;
+            
+            z-index:1;
+            transition:c.$transition-5;
+            .rastreio__forms{
+                @include flex-itens;
+                label{
+                    color:c.$bg;
+                    border:transparent;
+                    width:12rem;
+                }
+                input{
+                    background-color:c.$bg;
+                    width:100%;                
+                    &[type=submit]{
+                        color:c.$principal;
+                        background-color:c.$secondary;
+                        font-size:2.4rem;
+                        font-weight:900;
+                        margin-top:-1rem;
+                    }
+                }
+                fieldset{
+                    width:100%;
+                    display:flex;
+                    flex-wrap:nowrap;
+                }
+                select{
+                    background-color:c.$bg;
+                    width:100%;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    &::selection{
+                        color:c.$txtColor;
+                    }    
+                    &:focus{
+                        outline:none;
+                    }
+                    ::-ms-expand{
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}
