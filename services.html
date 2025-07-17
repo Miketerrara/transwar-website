@@ -25,7 +25,7 @@
     <title>Trans War Transportes</title>
     <link rel="stylesheet" href="./css/font-face.css">
 </head>
-<body>
+<body id="body">
     <header class="menu">
         <nav class="container flex">
             <a href="index.html">
@@ -132,118 +132,73 @@
     </div>
     <main>
         <section>
+            <svg style="rotate:180deg;width:100%; object-fit:cover;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2400 800" opacity="1">
+                <g fill="#2b3063ff" transform="matrix(1,0,0,1,-10.4755859375,332.08397674560547)">
+                    <path d="M-10,10C242.08333333333331,15.208333333333334,697.9166666666666,40,1200,35C1702.0833333333335,30,2097.9166666666665,-90.04166666666667,2400,-14C2702.0833333333335,62.04166666666667,3254.1666666666665,209.58333333333331,2650,400C2045.8333333333335,590.4166666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,25)" opacity="0.0"></path>
+                    <path d="M-10,10C242.08333333333331,15.208333333333334,697.9166666666666,40,1200,35C1702.0833333333335,30,2097.9166666666665,-90.04166666666667,2400,-14C2702.0833333333335,62.04166666666667,3254.1666666666665,209.58333333333331,2650,400C2045.8333333333335,590.4166666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,50)" opacity="1.00"></path>
+                </g>
+            </svg>
             <div class="container">
-                <h1 class="title">Como funciona</h1>
-                <p class="txt-dsc">Atuando há mais de 30 anos em benefícios <br>a saúde das pessoas.</p>
+                <h1 class="title-how">Como funciona</h1>
+                <p class="txt-dsc-how">O que nós fazemos e como fazemos</p>
             </div>            
         </section>
         <section>
             <div class="container">
-                <div class="diferenciais">
-                    <h2 class="title">Qualidade e <br>transparência</h2>
-                    <p class="txt-dsc">
-                        Sistemas integrados, rastreio e controle de qualidade para entregar sua carga da melhor forma.
-                    </p>
-                    <div class="diferenciais__imgs">
-                        <div class="diferenciais__imgs-image">
-                            <img src="./assets/103222.jpg" alt="Integrações via EDI">
-                            <div class="diferenciais__imgs-dsc">
-                                <h3 class="image__title">Integrações via EDI</h3>
-                                <p class="image__dsc">Processo de troca de documentos inteiramente automatizado, através de sistemas e integrações.</p>
-                            </div>
-                        </div>
-                        <div class="diferenciais__imgs-image">
-                            <img src="./assets/6313.jpg" alt="Rastreamento Online">
-                            <div class="diferenciais__imgs-dsc">
-                                <h3 class="image__title">Rastreamento Online</h3>
-                                <p class="image__dsc">Saiba onde sua carga está em qualquer lugar a qualquer momento do dia.</p>
-                            </div>
-                        </div>
-                        <div class="diferenciais__imgs-image">
-                            <img src="./assets/1307.jpg" alt="Transporte de Termolábeis">
-                            <div class="diferenciais__imgs-dsc">
-                                <h3 class="image__title">Transporte de produtos termolábeis</h3>
-                                <p class="image__dsc">Temos estrutura para transportar e armazenar produtos que necessitam de controle e monitoramento de temperatura.</p>
-                            </div>
-                        </div>
-                        <div class="diferenciais__imgs-image">
-                            <img src="./assets/2025-05-30-tw-foto-01.jpg" alt="Armazém Trans War">
-                            <div class="diferenciais__imgs-dsc">
-                                <h3 class="image__title">Controle de temperatura</h3>
-                                <p class="image__dsc">Armazém dedicado, com climatizador para controle e monitoramento de temperatura das cargas.</p>
-                            </div>
-                        </div>                        
+                <div class="services">
+                    <div class="services__pill">
+                        <img src="./assets/2025-07-04-Tw-photos.jpg" alt="Integrações via EDI" class="services__pill-img">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-sr-container-storage services__icon"></i>
+                            <h3 class="services__title">Cargas fechadas</h3>
+                            <p class="services__dsc">Exportador ou importador que possui volume de carga suficiente para completar um caminhão inteiro.</p>
+                        </div>                                    
+                    </div>
+                    <div class="services__pill">
+                        <img src="./assets/2025-05-30-tw-foto-01.jpg" alt="Integrações via EDI" class="services__pill-img" style="object-position: 95% -100px;">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-ss-circle-divide services__icon"></i>
+                            <h3 class="services__title">Cargas fracionadas</h3>
+                            <p class="services__dsc">Exportador ou importador não possui carga suficiente para ocupar a capacidade total do caminhão.</p>
+                        </div>                                    
+                    </div>
+                    <div class="services__pill">
+                        <img src="./assets/2025-05-30-tw-foto-02.jpg" alt="Integrações via EDI" class="services__pill-img" style="transform:scale(1.5); object-position:30% -50px;">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-sr-temperature-frigid services__icon"></i>
+                            <h3 class="services__title">Cargas refrigeradas</h3>
+                            <p class="services__dsc">Necessitam de controle e monitoramento de temperatura.</p>
+                        </div>                                    
+                    </div>
+                    <div class="services__pill">
+                        <img src="./assets/2025-05-30-tw-foto-01.jpg" alt="Integrações via EDI" class="services__pill-img" style="object-position:0 0">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-sr-dryer-alt services__icon"></i>
+                            <h3 class="services__title">Cargas secas</h3>
+                            <p class="services__dsc">Dispensam controle e monitoramento de temperatura</p>
+                        </div>                                    
+                    </div>
+                </div>
+                <div class="services">
+                    <div class="services__pill">
+                        <img src="./assets/imagem-paleteira-galpao.jpg" alt="Integrações via EDI" class="services__pill-img" style="object-position: 90% -100px;">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-sr-capsules services__icon"></i>
+                            <h3 class="services__title">In bound / Out bound</h3>
+                            <p class="services__dsc">Matéria prima destinada a produção ou produtos acabados e prontos para distribuição.</p>
+                        </div>                                    
+                    </div>
+                    <div class="services__pill">
+                        <img src="./assets/transport-logistics-concept.jpg" alt="Integrações via EDI" class="services__pill-img" style="object-position:10% 0;">
+                        <div class="services__imgs-dsc">
+                            <i class="fi fi-ss-plane-alt services__icon"></i>
+                            <h3 class="services__title">Materiais importados nacionalizados</h3>
+                            <p class="services__dsc">Matérias primas, medicamentos ou produtos acabados, equipamentos, etc...</p>
+                        </div>                                    
                     </div>
                 </div>                
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="quantify">
-                    <div class="quantify__container">
-                        <div class="quantify__info">
-                            <i class="fi fi-bs-truck-side"></i>
-                            <h4 class="quantify__info-title">120 +</h4>                        
-                        </div>
-                        <p class="quantify__info-txt">Possuímos uma frota diversificada e dedicada a operações farmacêuticas com sistema de controle da temperatura.</p>
-                    </div>
-                    <div class="quantify__container">
-                        <div class="quantify__info">
-                            <i class="fi fi-br-license"></i>
-                            <h4 class="quantify__info-title">Todas as licenças</h4>
-                        </div>
-                        <p class="quantify__info-txt">Para transportes de medicamentos, insumos, correlatos, cosméticos e saneantes.</p>
-                    </div>
-                    <div class="quantify__container">
-                        <div class="quantify__info">
-                            <i class="fi fi-br-process"></i>
-                            <h4 class="quantify__info-title">tms, erp, wms e +</h4>
-                        </div>
-                        <p class="quantify__info-txt">Sistema de qualidade, processos e procedimentos para gestão e garantia de qualidade.</p>
-                    </div>                
-                </div>                
-            </div>
-        </section>                
-        <section>
-            <div class="container">
-                <div class="faq">
-                    <div class="faq__container">
-                        <h2 class="title">Perguntas Frequentes</h2>
-                        <div class="box">
-                            <div class="box-questions">
-                                <h4>Qual o prazo de entrega?</h4>
-                                <i class="fi fi-br-angle-small-down"></i>                        
-                            </div>
-                            <p class="response">O prazo de entrega varia de acordo com a localidade e o tipo de serviço contratado. Entre em contato para mais informações.</p>
-                            <div class="box-questions">
-                                <h4>Com quais tipos de cargas vocês trabalham?</h4>
-                                <i class="fi fi-br-angle-small-down"></i>
-                            </div>
-                            <p class="response">
-                                Trabalhamos com cargas fracionadas, lotação, fracionadas, refrigeradas, secas, insumos, acabados e importados nacionalizados (DI).
-                            </p>
-                            <div class="box-questions">
-                                <h4>Quais licenças vocês possuem?</h4>
-                                <i class="fi fi-br-angle-small-down"></i>
-                            </div>
-                            <p class="response">
-                                Nós possuímos todas as licenças necessárias para transporte, inclusive: ANVISA, Autorização especial para transporte e armazenagem de medicamentos, Polícia Federal, Civil, Exército, IATA e IBAMA.
-                            </p>
-                            <div class="box-questions">
-                                <h4>Como você consegue garantir a qualidade os serviços?</h4>
-                                <i class="fi fi-br-angle-small-down"></i>
-                            </div>
-                            <p class="response">
-                                Nossos colaboradores passam por processo de treinamento de boas práticas no transporte de cargas sensíveis com controle de temperatura, medicamentos, químicos e cargas gerais. 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__container">
-                        <img src="./assets/2025-07-03-Tw-art-faq_01.png" alt="Mulher olhando para os paletes no galpão refrigerado." class="faq__container-img">
-                    </div>
-                </div>                
-            </div>
-        </section>
+        </section>               
         <section>
             <div class="container">
                 <div class="contato">
@@ -259,9 +214,9 @@
                             <input class="form__group-input" type="email" name="email" id="email" placeholder="contato@email.com">
                             <label class="form__group-label" for="tel">Telefone</label>
                             <input class="form__group-input" type="tel" name="tel" id="phone-number" size="16" placeholder="(xx) x xxxx.xxxx">
-                            <fieldset class="form__group--select">                                
-                                    <label class="form__group-label" for="city">Cidade</label>
-                                    <input class="form__group-input" type="text" name="city" id="group-city" placeholder="Digite a cidade onde se encontra...">                                                                            
+                            <fieldset>                                
+                                <label class="form__group-label" for="city">Cidade</label>
+                                <input class="form__group-input" type="text" name="city" id="group-city" placeholder="Digite a cidade onde se encontra...">                                                                            
                             </fieldset>
                             <input class="form__group-submit" type="submit" value="Enviar">
                         </form>
@@ -274,6 +229,7 @@
         </a>
     </main>
     <footer>
+        
         <div class="container">
             <div class="footer">
                 <div class="footer__columns">
@@ -290,7 +246,7 @@
                             <h5 class="footer__col-title">Serviços</h5>
                             <ul>
                                 <a href="cotacao.html"><li>Cotação de frete</li></a>
-                                <a href="rastreio.html"><li>Rastreio de carga</li></a>
+                                <a href="#" id="modalRastreio"><li>Rastreio de carga</li></a>
                             </ul>
                         </div>
                         <div class="footer__col">
@@ -331,7 +287,43 @@
             </div>
             <a href="index.html"><img src="./assets/logo-8.png" alt="Logotipo Trans War" class="footer__logo"></a>
         </div>
-    </footer>    
+    </footer>  
+    <div class="modal">
+        <div class="modal__rastreio">
+            <i class="fi fi-br-cross close"></i>
+            <form action="" method="post" class="modal__rastreio-form">
+                <fieldset>
+                    <label for="cpf-cnpj" class="modal__rastreio-label">Cpf/Cnpj</label>
+                    <input type="number" name="cpf-cnpj" id="n__rastreio" class="modal__rastreio-input">
+                </fieldset>
+                <fieldset>
+                    <label for="type-document" class="modal__rastreio-label">Tipo</label>
+                    <select name="type-document" id="type__doc" class="modal__rastreio--select">
+                        <option value="remetente">remetente</option>
+                        <option value="Nº da Nota">Nº da Nota</option>
+                        <option value="Chave da nota">Chave da nota</option>
+                        <option value="Nº do pedido">Nº do pedido</option>
+                        <option value="Nº do CT-e">Nº do CT-e</option>
+                        <option value="Nº da Minuta">Nº da Minuta</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="type-of-type" class="modal__rastreio-label">Doc</label>
+                    <select name="type-of-type" id="doc" class="modal__rastreio--select">
+                        <option value="NF">NF</option>
+                        <option value="CT-e">CT-e</option>
+                        <option value="Minuta">Minuta</option>
+                        <option value="Chave da nota">Chave</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="n__doc" class="modal__rastreio-label">Nº Doc</label>
+                    <input type="number" name="n__doc" id="number__doc" class="modal__rastreio-input">
+                </fieldset>
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+</div>   
 </body>
 <script src="./js/script.js"></script>
 </html>

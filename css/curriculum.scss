@@ -1,0 +1,86 @@
+@use 'variable.scss' as c;
+
+@mixin btn ($border:none, $bg:c.$principal, $bg-h:c.$principal-h,$p:1.4rem 4rem, $c:c.$secondary, $c-h:c.$bgTw, $mg:2rem auto){
+    border:$border;
+    background-color:$bg;
+    font:c.$ff-btn;
+    padding:$p;
+    border-radius:.4rem;
+    color:$c;
+    margin:$mg;
+    transition:c.$transition;
+    &:hover{
+        background-color: $bg-h;
+        color:$c-h;
+    }
+}
+@mixin group-form($brd:1px solid c.$txtColor){
+    label{
+        font:200 1.4rem c.$fs;
+        padding:2rem;
+        width:100%;
+        cursor:pointer;
+        border:transparent;
+    }
+    input[type=email]{
+        margin:1rem 0 2.8rem;
+        border-radius:.8rem;
+        padding:1.6rem 1rem;
+        border:$brd;
+        background-color:c.$bgTw;
+        width:100%;
+        outline: transparent;
+        &:focus{
+            border:2px solid c.$secondary;
+        }
+    }
+    input[type=file]{
+        display:none;
+    }
+    .input__curriculum{
+        border:1px solid c.$principal;
+        padding:1.4rem 1.2rem;
+        color:c.$principal;
+        border-radius:.8rem;
+    }
+    input[type=submit]{
+        @include btn;
+    }
+}
+@mixin flex-itens($gw:4rem, $alg-i:center, $jc:space-between){
+    display:flex;
+    justify-content:$jc;
+    align-items:$alg-i;
+    gap:$gw;
+    @media screen and (max-width:1024px){
+        flex-direction:column;
+        padding:0 2rem;
+        box-sizing:border-box;
+    }
+}
+
+.opportunity{
+    @include flex-itens($jc:flex-start, $alg-i:flex-start);
+    margin:10rem 0;
+    height:50rem;
+    &__dsc{
+        margin-left:3.6rem;
+        margin-top:2rem;
+    }
+    &__title{
+        font:800 2rem c.$fs;
+        color:c.$principal;
+    }
+    &__container{
+        flex:1 1 50%;
+        @include group-form;
+        a{
+            @include flex-itens($jc:flex-start, $gw:1.6rem);
+        }
+        a > i, a > p{
+            font-size:2rem;
+            color:c.$principal;
+            font-weight:800;
+        }        
+    }    
+}

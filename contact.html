@@ -25,7 +25,7 @@
     <title>Trans War Transportes</title>
     <link rel="stylesheet" href="./css/font-face.css">
 </head>
-<body>
+<body id="body">
     <header class="menu">
         <nav class="container flex">
             <a href="index.html">
@@ -262,9 +262,9 @@
                             <input class="form__group-input" type="email" name="email" id="email" placeholder="contato@email.com">
                             <label class="form__group-label" for="tel">Telefone</label>
                             <input class="form__group-input" type="tel" name="tel" id="phone-number" size="16" placeholder="(xx) x xxxx.xxxx">
-                            <fieldset class="form__group--select">                                
-                                    <label class="form__group-label" for="city">Cidade</label>
-                                    <input class="form__group-input" type="text" name="city" id="group-city" placeholder="Digite a cidade onde se encontra...">                                                                            
+                            <fieldset>                                
+                                <label class="form__group-label" for="city">Cidade</label>
+                                <input class="form__group-input" type="text" name="city" id="group-city" placeholder="Digite a cidade onde se encontra...">                                                                            
                             </fieldset>
                             <input class="form__group-submit" type="submit" value="Enviar">
                         </form>
@@ -277,6 +277,7 @@
         </a>
     </main>
     <footer>
+        
         <div class="container">
             <div class="footer">
                 <div class="footer__columns">
@@ -293,7 +294,7 @@
                             <h5 class="footer__col-title">Serviços</h5>
                             <ul>
                                 <a href="cotacao.html"><li>Cotação de frete</li></a>
-                                <a href="rastreio.html"><li>Rastreio de carga</li></a>
+                                <a href="#" id="modalRastreio"><li>Rastreio de carga</li></a>
                             </ul>
                         </div>
                         <div class="footer__col">
@@ -334,7 +335,43 @@
             </div>
             <a href="index.html"><img src="./assets/logo-8.png" alt="Logotipo Trans War" class="footer__logo"></a>
         </div>
-    </footer>    
+    </footer>  
+    <div class="modal">
+        <div class="modal__rastreio">
+            <i class="fi fi-br-cross close"></i>
+            <form action="" method="post" class="modal__rastreio-form">
+                <fieldset>
+                    <label for="cpf-cnpj" class="modal__rastreio-label">Cpf/Cnpj</label>
+                    <input type="number" name="cpf-cnpj" id="n__rastreio" class="modal__rastreio-input">
+                </fieldset>
+                <fieldset>
+                    <label for="type-document" class="modal__rastreio-label">Tipo</label>
+                    <select name="type-document" id="type__doc" class="modal__rastreio--select">
+                        <option value="remetente">remetente</option>
+                        <option value="Nº da Nota">Nº da Nota</option>
+                        <option value="Chave da nota">Chave da nota</option>
+                        <option value="Nº do pedido">Nº do pedido</option>
+                        <option value="Nº do CT-e">Nº do CT-e</option>
+                        <option value="Nº da Minuta">Nº da Minuta</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="type-of-type" class="modal__rastreio-label">Doc</label>
+                    <select name="type-of-type" id="doc" class="modal__rastreio--select">
+                        <option value="NF">NF</option>
+                        <option value="CT-e">CT-e</option>
+                        <option value="Minuta">Minuta</option>
+                        <option value="Chave da nota">Chave</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="n__doc" class="modal__rastreio-label">Nº Doc</label>
+                    <input type="number" name="n__doc" id="number__doc" class="modal__rastreio-input">
+                </fieldset>
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </div>  
 </body>
 <script src="./js/script.js"></script>
 </html>

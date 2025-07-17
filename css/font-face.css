@@ -62,7 +62,7 @@
     font-family: 'Panton';
     src: url('../font-face/Panton-BlackCaps.otf');
     src: local('Panton-BlackCaps'), local('Panton-blackCaps'),
-        url('../font-face/Panton-BlackCaps.otf') format('otf');
+        url('../font-face/Panton-BlackCaps.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -72,7 +72,7 @@
     font-family: 'Panton';
     src: url('../font-face/Panton-BlackitalicCaps.otf');
     src: local('Panton-BlackitalicCaps'), local('Panton-BlackitalicCaps'),
-        url('../font-face/Panton-BlackitalicCaps.otf') format('otf');
+        url('../font-face/Panton-BlackitalicCaps.otf') format('opentype');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -82,7 +82,7 @@
     font-family: 'Panton';
     src: url('../font-face/Panton-LightCaps.otf');
     src: local('Panton-LightCaps'), local('Panton-LightCaps'),
-        url('../font-face/Panton-LightCaps.otf') format('otf');
+        url('../font-face/Panton-LightCaps.otf') format('opentype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -92,7 +92,7 @@
     font-family: 'Panton';
     src: url('../font-face/Panton-LightitalicCaps.otf');
     src: local('Panton-LightitalicCaps'), local('Panton-LightitalicCaps'),
-        url('../font-face/Panton-LightitalicCaps.otf') format('otf');
+        url('../font-face/Panton-LightitalicCaps.otf') format('opentype');
     font-weight: 200;
     font-style: italic;
     font-display: swap;

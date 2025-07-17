@@ -1,0 +1,185 @@
+@use 'variable.scss' as c;
+
+@mixin btn ($border:none, $bg:c.$principal, $bg-h:c.$principal-h,$p:1.4rem 4rem, $c:c.$secondary, $c-h:c.$bgTw, $mg:2rem auto){
+    border:$border;
+    background-color:$bg;
+    font:c.$ff-btn;
+    padding:$p;
+    border-radius:.4rem;
+    color:$c;
+    margin:$mg;
+    transition:c.$transition;
+    &:hover{
+        background-color: $bg-h;
+        color:$c-h;
+    }
+}
+@mixin group-form($brd:1px solid c.$txtColor){
+    label{
+        font:200 1.4rem c.$fs;
+        padding:2rem;
+        text-transform:uppercase;
+        cursor:pointer;
+        border:$brd;
+    }
+    input{
+        padding:1rem;
+        border:$brd;
+    }
+    input[type=number]{
+        -moz-appearance:textfield;
+        appearance:textfield;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+@mixin flex-itens($gw:4rem, $alg-i:center, $jc:space-between, $f-dir:column){
+    display:flex;
+    justify-content:$jc;
+    align-items:$alg-i;
+    gap:$gw;
+    @media screen and (max-width:1024px){
+        flex-direction:$f-dir;
+        padding:0 2rem;
+        box-sizing:border-box;
+    }
+}
+
+.carrer{
+    padding:6rem 8rem 6rem 1rem;
+    width:100%;
+    background:c.$bgTw;
+    box-sizing:border-box;
+    @include flex-itens($alg-i:flex-start);
+    &__sidebar{
+        flex:1 1 20%;
+        display:flex;
+        flex-direction:column;
+        border-right: 1px solid c.$txtColorGrey;
+        &-itens{
+            width:100%;
+            flex-direction:column;
+            margin:1.2rem;
+            div{
+                margin-top:2rem;
+                margin-left:1.2rem;
+                @include flex-itens($alg-i:center, $jc:flex-start, $gw:1rem);                
+                input[type=checkbox]{                    
+                    outline:1px solid c.$principal;
+                    &:hover{
+                        outline:1px solid c.$secondary;
+                        border:1px solid c.$secondary;
+                    }
+                    &:focus{
+                        outline:1px solid c.$secondary;
+                    }
+                }
+                label{
+                    font:300 1.2rem c.$fs;
+                    color:c.$txtColor;
+                }
+            }            
+        }
+        &-btn{
+            width:100%;
+            padding-right:3.2rem;
+            box-sizing:border-box;
+            color:c.$principal;
+            font-weight:800;
+            font-size:1.2rem;
+            @include flex-itens;
+        }
+        hr{
+            width:90%;
+            height:2px;
+            background:c.$txtColorGrey;
+            border: transparent;
+            margin:2rem auto;
+        }
+    }
+    &__opportunities{
+        flex:1 1 80%;
+        input[type=search]{
+            width:100%;
+            padding:1.6rem 1rem;
+            box-sizing:border-box;
+            margin-right:2rem;
+            border-radius:.2rem;
+            border:transparent;
+            outline:1px solid c.$txtColorGrey;
+            &::placeholder{
+                color:c.$txtColorGrey;
+                letter-spacing:1px;
+            }
+            &:focus{
+                outline:2px solid c.$secondary;
+                border: transparent;
+            }
+        }
+        &-modal{
+            padding:2.8rem 3.2rem;
+            margin-top:2rem;
+            box-shadow:3px 3px 6px rgba(0,0,0,10%);
+            background-color:c.$bg;
+            border-radius:1rem;
+            box-sizing:border-box; 
+            cursor:pointer;
+            transition:c.$transition-5;
+            &:hover{
+                box-shadow:5px 5px 10px rgba(0,0,0,20%);
+            }           
+        }
+    }
+}
+.modal__title{
+    margin-bottom:.4rem;
+    font:c.$ff-h1-mm;
+    color:c.$principal;
+}
+.modal__tags{
+    margin-bottom:4rem;
+    @include flex-itens($gw:3.2rem,$jc:flex-start,$alg-i:flex-start);
+    &--local, &--period, &--qtde, &--journey{
+        @include flex-itens($gw:1rem, $jc:flex-start, $f-dir:row);
+        color:c.$txtColor;
+        .txt-tags{
+            font:c.$ff-dsc;
+            color:c.$txtColorGrey;
+        }
+    }
+}
+.txt-date{
+    font:c.$ff-dsc;
+    color:c.$txtColor;
+}
+.hero-video{
+    width:100%;
+    height:50vh;
+    object-fit:cover;
+    object-position:20% 0;
+}
+.carrer__title{
+    font:c.$ff-h1-hm;
+    color:#787878;
+    text-transform:uppercase;
+}
+@media screen and (max-width:1024px){
+    .carrer__title{
+        font:c.$ff-h1-mm;
+        width:80%;
+    }
+    .carrer__sidebar{
+        display:none;
+    }
+    .modal__tags{
+        padding:0;
+        gap:1rem;
+        &--local, &--period, &--qtde, &--journey{
+            padding:0;
+        }
+    }
+    
+}

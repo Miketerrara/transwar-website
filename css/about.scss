@@ -125,13 +125,13 @@
         background-color: c.$principal;
         transform-origin: top left;
         transform:rotate(90deg) translate(0, 50%);
-        width:366%;
+        width:370%;
     }
     &__info{
         display:flex;
         justify-content:center;
         align-items:first baseline;
-        margin-left:26rem;
+        margin-left:22rem;
         position:relative;
         gap:4rem;     
         z-index:1;
@@ -154,7 +154,7 @@
     
     &__info-r{
         @extend .timeline__info;
-        margin-right:26rem;
+        margin-right:22rem;
         margin-left:0;
         z-index:1;
         position:relative;
