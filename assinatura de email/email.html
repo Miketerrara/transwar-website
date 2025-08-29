@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinatura de e-mail</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .logotipo{
+            display:flex;
+            width:16vw;
+            height:180px;
+            background-color:#2b3063;
+            justify-content: center;
+            align-items: center;
+        }
+        .logotipo-img{            
+            max-width:10vw;            
+        }
+        .infos{
+            background-color:#f0f2ff;
+            width:50%;
+            height:180px;
+            padding:12px 40px;
+            box-sizing: border-box;
+        }
+        h1{
+            font:900 28px 'Arial','sans-serif';
+            text-transform:uppercase;
+            color:#2b3063;
+        }
+        h2{
+            font:400 16px/20px 'Arial', 'sans-serif';
+            color:#e6c352;
+            letter-spacing: 5px;
+            margin-top:0;
+            margin-bottom:10px;
+        }
+        a{
+            text-decoration:none;
+        }
+        .icon{
+            width:16px;
+        }
+        .wpp, .web, .endereco, .social{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            margin:4px 0;
+            justify-content: flex-start;
+        }
+        p{
+            color:#2b3063;
+            font:300 14px/18px 'Arial', 'sans-serif';
+        }
+        strong{
+            font-weight:700;
+        }
+    </style>
+</head>
+<body>
+    <div class="logotipo">
+        <img src="./sources/logotipo-tw_01.png" class="logotipo-img" alt="Logotipo TransWar">
+    </div>
+    <div class="infos">
+        <h1>Bernardo Lopes</h1>
+        <h2>Comercial</h2>
+        <div >
+            <a href="https://wa.me/+551921010600?text=Olá%20Quero%20conversar%20com%20fulano." class="wpp" target="_blank">
+                <img src="./sources/whatsapp.svg" class="icon" alt="wpp">
+                <p><strong>19</strong> 2101 0600</p>
+            </a>
+        </div>
+        <div >
+            <a href="http://" class="web" target="_blank">
+                <img src="./sources/globe.svg" class="icon" alt="icone de webpage">
+                <p>transwar.com.br</p>
+            </a>
+        </div>
+        <div class="endereco">
+            <img src="./sources/marker.svg" alt="icone de localização" class="icon">
+            <p><strong>Rua Dr Gustavo Orsolini, 2365,</strong> Jardim Nova Mercedes, Campinas, SP</p>
+        </div>
+        <div class="social">
+            <a href="http://" target="_blank">
+                <img src="./sources/instagram.svg" alt="Instagram Trans War" class="icon">
+            </a><a href="http://" target="_blank">
+                <img src="./sources/linkedin.svg" alt="Linkedin Trans War" class="icon">
+            </a>
+            <p>@transwar</p>
+        </div>
+    </div>
+</body>
+</html>
