@@ -46,42 +46,24 @@
             </button>
         </nav>        
         
-        <div class=" container rastreio">
-            <div class="rastreio__info">
-                <p class="rastreio__info-title">Rastreie <br>sua carga</p>
-                <i class="fi fi-bs-angle-small-right"></i>
-                <i class="fi fi-bs-exclamation"></i>
-            </div>
-            <form action="" method="post" class="rastreio__forms">
-                <fieldset>
-                    <label for="cpf-cnpj">cpf/cnpj</label>
-                    <input type="number" name="cpf-cnpj" id="n__rastreio">
-                </fieldset>
-                <fieldset><label for="type-document">tipo</label>
-                    <select name="type-document" id="type__doc">
-                        <option value="remetente">remetente</option>
-                        <option value="Nº da Nota">Nº da Nota</option>
-                        <option value="Chave da nota">Chave da nota</option>
-                        <option value="Nº do pedido">Nº do pedido</option>
-                        <option value="Nº do CT-e">Nº do CT-e</option>
-                        <option value="Nº da Minuta">Nº da Minuta</option>
-                    </select>
-                </fieldset>
-                <fieldset><label for="type-of-type">doc</label>
-                    <select name="type-of-type" id="doc">
-                        <option value="NF">NF</option>
-                        <option value="CT-e">CT-e</option>
-                        <option value="Minuta">Minuta</option>
-                        <option value="Chave da nota">Chave</option>
-                    </select>
-                </fieldset>
-                <fieldset><label for="n__doc">Nº Doc</label><input type="number" name="n__doc" id="number__doc"></fieldset>
-                <input type="submit" value=">">
-            </form>
+        <div class=" container">
+            <a href="https://transwar.minhacarga.net/" class="rastreio" target="_blank" rel="noopener noreferrer">
+                <div class="rastreio__info">
+                    <p class="rastreio__info-title">Rastreie <br>sua carga</p>
+                    <i class="fi fi-bs-angle-small-right"></i>
+                    <i class="fi fi-bs-exclamation"></i>
+                </div>
+                <form action="" method="post" class="rastreio__forms">
+                    
+                    <input type="submit" value=">">
+                </form>
+            </a>
         </div>
         
         <button type="button" class="rastreio__btn">
-            Clique e rastreie a carga <i class="fi fi-bs-angle-small-right"></i>
+            <a href="https://transwar.minhacarga.net/" target="_blank" rel="noopener noreferrer">
+                Clique e rastreie a carga <i class="fi fi-bs-angle-small-right"></i>
+            </a>
         </button>
     </header>
     <div class="nav__container">
@@ -99,36 +81,6 @@
                 <i class="fi fi-brands-whatsapp"></i>
             </a>
         </div>
-    </div>
-    <div class="rastreio__container">
-        <form action="" method="post" class="rastreio__forms">
-                <fieldset>
-                    <label for="cpf-cnpj">cpf/cnpj</label>
-                    <input type="number" name="cpf-cnpj" id="n__rastreio">
-                </fieldset>
-                <fieldset>
-                    <label for="type-document">tipo</label>
-                    <select name="type-document" id="type__doc">
-                        <option value="remetente">remetente</option>
-                        <option value="Nº da Nota">Nº da Nota</option>
-                        <option value="Chave da nota">Chave da nota</option>
-                        <option value="Nº do pedido">Nº do pedido</option>
-                        <option value="Nº do CT-e">Nº do CT-e</option>
-                        <option value="Nº da Minuta">Nº da Minuta</option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <label for="type-of-type">doc</label>
-                    <select name="type-of-type" id="doc">
-                        <option value="NF">NF</option>
-                        <option value="CT-e">CT-e</option>
-                        <option value="Minuta">Minuta</option>
-                        <option value="Chave da nota">Chave</option>
-                    </select>
-                </fieldset>
-                <fieldset><label for="n__doc">Nº Doc</label><input type="number" name="n__doc" id="number__doc"></fieldset>
-                <input type="submit" value=">">
-            </form>
     </div>
     <main>
         <section>
