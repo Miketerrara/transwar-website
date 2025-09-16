@@ -1,8 +1,8 @@
 @use 'variable.scss' as c;
 
-@mixin flex-itens($gw:4rem){
+@mixin flex-itens($gw:4rem, $jtf: space-between){
     display:flex;
-    justify-content:space-between;
+    justify-content:$jtf;
     align-items:center;
     gap:$gw;
     @media screen and (max-width:1440px){
@@ -116,7 +116,8 @@
 }
 .rastreio{
     padding:2rem 0;
-    @include flex-itens;
+    gap:4rem;
+    @include flex-itens($jtf:flex-end);
     &__info{
         @include flex-itens($gw:.8rem);
         &-title{
@@ -224,7 +225,15 @@ display:none;
         width:100%;
         padding:2rem 2.8rem;
         background-color:c.$principal;
-        color:c.$bg;
+        
+        a{
+            @include flex-itens;
+            width:100%;
+            color:c.$bg;
+            font-size:1.6rem;
+            font-weight:200;
+            letter-spacing: 1px;
+        }
     }
     
 }

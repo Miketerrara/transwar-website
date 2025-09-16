@@ -217,8 +217,9 @@ button {
 
 .rastreio {
   padding: 2rem 0;
+  gap: 4rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 4rem;
 }
@@ -397,11 +398,28 @@ button {
     width: 100%;
     padding: 2rem 2.8rem;
     background-color: #2B3063;
-    color: #fff;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1440px) {
   .rastreio__btn {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .rastreio__btn a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1440px) {
+  .rastreio__btn a {
     gap: 1rem;
   }
 }
@@ -1986,12 +2004,12 @@ footer .footer__logo {
 }
 
 .opportunity {
+  margin: 10rem 0;
+  height: 50rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
-  margin: 10rem 0;
-  height: 50rem;
 }
 @media screen and (max-width: 1024px) {
   .opportunity {
@@ -2245,11 +2263,11 @@ footer .footer__logo {
   }
 }
 .modal__tags--local, .modal__tags--period, .modal__tags--qtde, .modal__tags--journey {
+  color: #787878;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  color: #787878;
 }
 @media screen and (max-width: 1024px) {
   .modal__tags--local, .modal__tags--period, .modal__tags--qtde, .modal__tags--journey {

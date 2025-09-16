@@ -143,8 +143,8 @@
     margin-bottom:4rem;
     @include flex-itens($gw:3.2rem,$jc:flex-start,$alg-i:flex-start);
     &--local, &--period, &--qtde, &--journey{
-        @include flex-itens($gw:1rem, $jc:flex-start, $f-dir:row);
         color:c.$txtColor;
+        @include flex-itens($gw:1rem, $jc:flex-start, $f-dir:row);
         .txt-tags{
             font:c.$ff-dsc;
             color:c.$txtColorGrey;
