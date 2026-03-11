@@ -22,7 +22,11 @@ elements.bar.addEventListener('click', () => {
 elements.barsClose.addEventListener('click', () => {
     elements.bar.dispatchEvent(new Event('click'));
 })
-
+elements.faq.forEach((item, index)=> {
+    item.addEventListener("click", () => {
+        elements.resposta[index].classList.toggle("response--active");
+    })
+})
 function fecharModal(modal) {
     let fechar = document.querySelectorAll('.close');
     fechar.forEach(item =>{

@@ -318,19 +318,27 @@ font:200 1.2rem/1.4rem c.$fs;
         }
     }
     .response{
-        display:none;
-        visibility:hidden;
+        overflow:hidden;
         transition:c.$transition;
-        padding: 1.2rem 0;
+        margin:0 2rem;
+        padding: 0;
+        text-align:left;
+        font: c.$ff-dsc;
+        width:500px;
+        opacity:0;
+        height:0;
             &--active{
             display:flex;
             flex-direction: column;
             width:500px;
             margin: 0 2rem;
             text-align:left;
-            visibility:visible;
+            height:5rem;
+            opacity:1;
+            overflow:visible;
             font: c.$ff-dsc;
             color: c.$txtColor;
+            transition:c.$transition;
         }
     }
     @media screen and (max-width:1440px){

@@ -62,9 +62,9 @@
     }
     
 }
-@mixin input-and-label-form($bg:c.$bgTw, $c:c.$txtColor){
+@mixin input-and-label-form($bg:c.$bgTw, $c:c.$txtColor, $label-c:c.$bg){
     &-label{
-        color:$c !important;
+        color:$label-c !important;
         font-weight:200;           
         @include dsc;
     }
@@ -174,7 +174,7 @@
     margin:5rem 0;
     &__group{
         @include flex-itens;
-        @include input-and-label-form($c:c.$bg);
+        @include input-and-label-form;
     }
     &__cotacao{        
         width:100%;

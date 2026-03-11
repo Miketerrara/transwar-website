@@ -586,7 +586,7 @@ footer .footer__logo {
   width: 100%;
   box-sizing: border-box;
   margin: 1rem 0;
-  color: #fff;
+  color: #787878;
 }
 .form__group-input::placeholder {
   font-size: 1.4rem;
@@ -629,7 +629,7 @@ footer .footer__logo {
   box-sizing: border-box;
 }
 .form__group select::selection {
-  color: #fff;
+  color: #787878;
 }
 .form__group select:focus {
   outline: none;
@@ -645,7 +645,7 @@ footer .footer__logo {
   border-radius: 0.6rem;
   font: 200 1.4rem "Aller", sans-serif;
   font-weight: 800;
-  color: #fff;
+  color: #787878;
   text-align: left;
   border: 1px solid #E6C352;
   background-color: transparent;
@@ -665,14 +665,14 @@ footer .footer__logo {
   padding: 1.6rem 1.2rem;
   background-color: #F9F9FF;
   border-radius: 0.8rem;
-  color: #fff;
+  color: #787878;
   outline: transparent;
   border: transparent;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .form__group--select::selection {
-  color: #fff;
+  color: #787878;
 }
 .form__group--select:focus {
   outline: none;
@@ -706,7 +706,7 @@ footer .footer__logo {
   width: 100%;
 }
 .form__cotacao-label {
-  color: #787878 !important;
+  color: #fff !important;
   font-weight: 200;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
@@ -913,7 +913,7 @@ footer .footer__logo {
   display: none;
 }
 .modal .modal__rastreio-label {
-  color: #787878 !important;
+  color: #fff !important;
   font-weight: 200;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
@@ -1065,7 +1065,7 @@ footer .footer__logo {
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
 }
 .modal .modal__rastreio--active-label {
-  color: #787878 !important;
+  color: #fff !important;
   font-weight: 200;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
@@ -1210,7 +1210,7 @@ footer .footer__logo {
   display: none;
 }
 .modal__opportunities-label {
-  color: #787878 !important;
+  color: #fff !important;
   font-weight: 200;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
@@ -1364,7 +1364,7 @@ footer .footer__logo {
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
 }
 .modal__opportunities--active-label {
-  color: #787878 !important;
+  color: #fff !important;
   font-weight: 200;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
@@ -2631,10 +2631,15 @@ body {
   transform: rotate(180deg);
 }
 .faq .response {
-  display: none;
-  visibility: hidden;
+  overflow: hidden;
   transition: all 0.2s ease-in-out;
-  padding: 1.2rem 0;
+  margin: 0 2rem;
+  padding: 0;
+  text-align: left;
+  font: 200 1.4rem "Aller", sans-serif;
+  width: 500px;
+  opacity: 0;
+  height: 0;
 }
 .faq .response--active {
   display: flex;
@@ -2642,9 +2647,12 @@ body {
   width: 500px;
   margin: 0 2rem;
   text-align: left;
-  visibility: visible;
+  height: 5rem;
+  opacity: 1;
+  overflow: visible;
   font: 200 1.4rem "Aller", sans-serif;
   color: #787878;
+  transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: 1440px) {
   .faq__container .box .box-questions {

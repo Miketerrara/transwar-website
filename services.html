@@ -159,18 +159,23 @@
                         <p class="txt-dsc">Preencha o formulário para entrar em contato e fazer parte do ecossistema da Trans War</p>
                     </div>
                     <div class="contato__container">
-                        <form action="" method="post" class="form">
+                        <form target="_blank" action="https://formsubmit.co/michaeldrums19@gmail.com" method="POST" class="form">
                             <label class="form__group-label" for="name">Nome Completo</label>
-                            <input class="form__group-input" type="text" name="name" id="name" placeholder="Digite o nome completo">
+                            <input class="form__group-input" type="text" name="name" id="name" placeholder="Digite o nome completo" required>
                             <label class="form__group-label" for="email">E-mail</label>
-                            <input class="form__group-input" type="email" name="email" id="email" placeholder="contato@email.com">
+                            <input class="form__group-input" type="email" name="email" id="email" placeholder="contato@email.com" required>
                             <label class="form__group-label" for="tel">Telefone</label>
-                            <input class="form__group-input" type="tel" name="tel" id="phone-number" size="16" placeholder="(xx) x xxxx.xxxx">
+                            <input class="form__group-input" type="tel" name="tel" id="phone-number" placeholder="(xx) x xxxx.xxxx" required>
                             <fieldset>                                
                                 <label class="form__group-label" for="city">Cidade</label>
                                 <input class="form__group-input" type="text" name="city" id="group-city" placeholder="Digite a cidade onde se encontra...">                                                                            
                             </fieldset>
-                            <input class="form__group-submit" type="submit" value="Enviar">
+                            <input type="hidden" name="_next" value="https://transwar.com.br/index.html">
+                            <input type="hidden" name="_subject" value="+1 contato de cliente!">
+                            <input type="hidden" name="_cc" value="rp@transwar.com.br">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
+                            <input class="form__group-submit--active" type="submit" value="Enviar">
                         </form>
                     </div>
                 </div>
